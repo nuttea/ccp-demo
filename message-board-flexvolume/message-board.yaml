@@ -32,6 +32,6 @@ spec:
   type: NodePort
   ports:
   - port: 5000
-    nodePort: 30200
+    nodePort: 30201
   selector:
     name: message-board

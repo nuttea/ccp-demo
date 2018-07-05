@@ -12,4 +12,4 @@ spec:
     driver: "hyperflex/hxvolume"
     fsType: "ext4"
     options:
-      hyperflex.io/volumeid: "lunfile_1"
+      hyperflex.io/volumeid: "lunfile_30"
