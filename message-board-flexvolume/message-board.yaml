@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: message-board
+    labels:
+        app: message-board
+        name: message-board
+    namespace: default
+spec:
+    containers:
+    - name: message-board
+      image: michzimm/message_board:version1
+      volumeMounts:
+      - name: demovolume1
+        mountPath: /sqldb
+      ports:
+      - containerPort: 5000
+      imagePullPolicy: Always
+    volumes:
+    - name: demovolume1
+      persistentVolumeClaim:
+        claimName: "message-board-pvc"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: message-board
+  labels:
+    name: message-board
+  namespace: default
+spec:
+  type: NodePort
+  ports:
+  - port: 5000
+    nodePort: 30200
+  selector:
+    name: message-board

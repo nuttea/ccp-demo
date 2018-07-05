@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cisco-shop-ingress
+spec:
+  rules:
+  - host: cisco-shop.ccp1.ciscoth.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: front-end
+          servicePort: 80
