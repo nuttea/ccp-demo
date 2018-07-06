@@ -5,7 +5,7 @@ metadata:
     labels:
         app: message-board
         name: message-board
-    namespace: default
+    namespace: message-board
 spec:
     containers:
     - name: message-board
@@ -27,7 +27,7 @@ metadata:
   name: message-board
   labels:
     name: message-board
-  namespace: default
+  namespace: message-board
 spec:
   type: NodePort
   ports:
