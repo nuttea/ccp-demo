@@ -2,6 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: cisco-shop-ingress
+  namespace: cisco-shop
 spec:
   rules:
   - host: cisco-shop.ccp1.ciscoth.com
