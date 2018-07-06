@@ -11,3 +11,10 @@ spec:
         backend:
           serviceName: vote
           servicePort: 80
+  - host: result.ccp1.ciscoth.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: result
+          servicePort: 80
