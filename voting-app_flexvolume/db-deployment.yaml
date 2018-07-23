@@ -12,6 +12,9 @@ spec:
       containers:
       - image: postgres:9.4
         name: db
+        env:
+        - name: PGDATA
+          value: "/var/lib/postgresql/data/pgdata"
         volumeMounts:
         - mountPath: /var/lib/postgresql/data
           name: db-data

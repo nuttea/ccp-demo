@@ -10,6 +10,6 @@ spec:
     - ReadWriteOnce
   flexVolume:
     driver: "hyperflex/hxvolume"
-    fsType: "ext4"
+    fsType: "ext3"
     options:
       hyperflex.io/volumeid: "lunfile_29"
